@@ -35,9 +35,7 @@
             treeView1 = new TreeView();
             panel1 = new Panel();
             dataGridView1 = new DataGridView();
-            menuStrip1 = new MenuStrip();
             файлToolStripMenuItem = new ToolStripMenuItem();
-            довідкаToolStripMenuItem = new ToolStripMenuItem();
             створитиНовуToolStripMenuItem = new ToolStripMenuItem();
             завантажитиToolStripMenuItem = new ToolStripMenuItem();
             зберегтиToolStripMenuItem = new ToolStripMenuItem();
@@ -45,8 +43,10 @@
             закритиToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripSeparator();
             вихідToolStripMenuItem = new ToolStripMenuItem();
+            довідкаToolStripMenuItem = new ToolStripMenuItem();
             навігаціяToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -121,15 +121,6 @@
             dataGridView1.Size = new Size(735, 341);
             dataGridView1.TabIndex = 0;
             // 
-            // menuStrip1
-            // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem, довідкаToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1130, 24);
-            menuStrip1.TabIndex = 6;
-            menuStrip1.Text = "menuStrip1";
-            // 
             // файлToolStripMenuItem
             // 
             файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { створитиНовуToolStripMenuItem, завантажитиToolStripMenuItem, зберегтиToolStripMenuItem, зберегтиЯкToolStripMenuItem, закритиToolStripMenuItem, toolStripMenuItem1, вихідToolStripMenuItem });
@@ -137,24 +128,19 @@
             файлToolStripMenuItem.Size = new Size(48, 20);
             файлToolStripMenuItem.Text = "Файл";
             // 
-            // довідкаToolStripMenuItem
-            // 
-            довідкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { навігаціяToolStripMenuItem, aboutToolStripMenuItem });
-            довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
-            довідкаToolStripMenuItem.Size = new Size(61, 20);
-            довідкаToolStripMenuItem.Text = "Довідка";
-            // 
             // створитиНовуToolStripMenuItem
             // 
             створитиНовуToolStripMenuItem.Name = "створитиНовуToolStripMenuItem";
             створитиНовуToolStripMenuItem.Size = new Size(180, 22);
             створитиНовуToolStripMenuItem.Text = "Створити нову";
+            створитиНовуToolStripMenuItem.Click += створитиНовуToolStripMenuItem_Click;
             // 
             // завантажитиToolStripMenuItem
             // 
             завантажитиToolStripMenuItem.Name = "завантажитиToolStripMenuItem";
             завантажитиToolStripMenuItem.Size = new Size(180, 22);
             завантажитиToolStripMenuItem.Text = "Завантажити";
+            завантажитиToolStripMenuItem.Click += завантажитиToolStripMenuItem_Click;
             // 
             // зберегтиToolStripMenuItem
             // 
@@ -185,17 +171,33 @@
             вихідToolStripMenuItem.Size = new Size(180, 22);
             вихідToolStripMenuItem.Text = "Вихід";
             // 
+            // довідкаToolStripMenuItem
+            // 
+            довідкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { навігаціяToolStripMenuItem, aboutToolStripMenuItem });
+            довідкаToolStripMenuItem.Name = "довідкаToolStripMenuItem";
+            довідкаToolStripMenuItem.Size = new Size(61, 20);
+            довідкаToolStripMenuItem.Text = "Довідка";
+            // 
             // навігаціяToolStripMenuItem
             // 
             навігаціяToolStripMenuItem.Name = "навігаціяToolStripMenuItem";
-            навігаціяToolStripMenuItem.Size = new Size(180, 22);
+            навігаціяToolStripMenuItem.Size = new Size(125, 22);
             навігаціяToolStripMenuItem.Text = "Навігація";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(125, 22);
             aboutToolStripMenuItem.Text = "About";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem, довідкаToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1130, 24);
+            menuStrip1.TabIndex = 6;
+            menuStrip1.Text = "menuStrip1";
             // 
             // Form1
             // 
@@ -229,17 +231,17 @@
         private TreeView treeView1;
         private Panel panel1;
         private DataGridView dataGridView1;
-        private MenuStrip menuStrip1;
         private ToolStripMenuItem файлToolStripMenuItem;
         private ToolStripMenuItem створитиНовуToolStripMenuItem;
-        private ToolStripMenuItem довідкаToolStripMenuItem;
         private ToolStripMenuItem завантажитиToolStripMenuItem;
         private ToolStripMenuItem зберегтиToolStripMenuItem;
         private ToolStripMenuItem зберегтиЯкToolStripMenuItem;
         private ToolStripMenuItem закритиToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem вихідToolStripMenuItem;
+        private ToolStripMenuItem довідкаToolStripMenuItem;
         private ToolStripMenuItem навігаціяToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        private MenuStrip menuStrip1;
     }
 }

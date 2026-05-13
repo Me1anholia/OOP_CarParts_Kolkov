@@ -8,6 +8,9 @@ namespace OOP_CarParts_Kolkov.Models
 {
     internal class Car
     {
+        public string brand {  get; set; }
+        public string model { get; set; }
+        public int year { get; set; }
         public Car() 
         {
             
@@ -18,8 +21,7 @@ namespace OOP_CarParts_Kolkov.Models
             string model = m;
             int year = y;
         }
-        string brand {  get; set; }
-        string model { get; set; }
-        int year { get; set; }
+        
+
     }
 }

@@ -59,6 +59,10 @@ namespace OOP_CarParts_Kolkov.Models
                 if(!File.Exists(_filePath))
                     return new List<Part>();
                 string jsonString = File.ReadAllText(_filePath);
+                if (string.IsNullOrWhiteSpace(jsonString))
+                {
+                    return new List<Part>();
+                }
                 return JsonSerializer.Deserialize<List<Part>>(jsonString, _options) ?? new List<Part>();
             }
             catch (Exception ex) 
