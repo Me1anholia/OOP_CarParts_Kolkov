@@ -8,10 +8,10 @@ namespace OOP_CarParts_Kolkov.Models
 {
     internal class Part
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public string Manufacturer { get; set; }
-        public int Price { get; set; }
+        public decimal Price { get; set; }
         public int QuantityInStock { get; set; }
         public List<Car> CompatibleCars { get; set; }
 
@@ -19,7 +19,7 @@ namespace OOP_CarParts_Kolkov.Models
         {
             CompatibleCars = new List<Car>();
         }
-        public Part(int id, string name, string manufacturer, int price, int quantityInStock)
+        public Part(string id, string name, string manufacturer, decimal price, int quantityInStock)
         {
             Id = id;
             Name = name;

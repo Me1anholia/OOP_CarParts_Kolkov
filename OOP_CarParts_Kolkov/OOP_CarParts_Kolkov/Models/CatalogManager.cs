@@ -27,7 +27,7 @@ namespace OOP_CarParts_Kolkov.Models
             return foundParts;
         }
 
-        public bool RemovePartById(int Id)
+        public bool RemovePartById(string Id)
         {
             for (int i = 0; i < Parts.Count; i++)
             {
