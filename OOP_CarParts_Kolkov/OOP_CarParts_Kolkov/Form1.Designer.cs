@@ -147,6 +147,7 @@
             зберегтиToolStripMenuItem.Name = "зберегтиToolStripMenuItem";
             зберегтиToolStripMenuItem.Size = new Size(180, 22);
             зберегтиToolStripMenuItem.Text = "Зберегти";
+            зберегтиToolStripMenuItem.Click += зберегтиToolStripMenuItem_Click;
             // 
             // зберегтиЯкToolStripMenuItem
             // 

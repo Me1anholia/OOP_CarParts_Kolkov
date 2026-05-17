@@ -40,7 +40,7 @@ namespace OOP_CarParts_Kolkov
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message,"Error Occured",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -69,6 +69,27 @@ namespace OOP_CarParts_Kolkov
                         MessageBox.Show(ex.Message, "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void зберегтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (jsonService == null)
+                {
+                    MessageBox.Show("Спочатку створіть або відкрийте базу данних запчастин", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                
+
+                jsonService.Save(catalog.Parts);
+                MessageBox.Show("Данні успішно збережені до файлу", "Save to file", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не вдалося зберегти дані.", "Помилка збереження", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
